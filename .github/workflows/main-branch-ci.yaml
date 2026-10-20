@@ -10,5 +10,9 @@ jobs:
     steps:
       - name: Verify Push
         run: echo " Code pushed to main branch"
+      - name: Print Secret Key
+        env:
+          MY_SECRET: ${{ secrets.MAIN_KEY }}
+        run: echo "The secret is loaded. Value is $MY_SECRET"
     
   
